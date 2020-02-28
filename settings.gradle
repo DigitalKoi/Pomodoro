@@ -1,4 +1,0 @@
-include ':domain'
-include ':data'
-rootProject.name='pomodoro'
-include ':app'
