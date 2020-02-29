@@ -14,7 +14,7 @@ object Build {
 }
 
 object Libs {
-    const val androidGradlePlugin = "com.android.tools.build:gradle:3.6.0"
+    const val androidGradlePlugin = "com.android.tools.build:gradle:4.0.0-beta01"
     const val dexcountGradlePlugin = "com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.2"
 
     const val timber = "com.jakewharton.timber:timber:4.7.1"
