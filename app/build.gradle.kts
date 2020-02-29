@@ -1,3 +1,5 @@
+import com.koidev.pomodoro.*
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -5,13 +7,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(Build.compileSdk)
     defaultConfig {
-        applicationId = "com.koidev.pomodoro"
-        minSdkVersion(21)
-        targetSdkVersion(29)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Build.appId
+        minSdkVersion(Build.minSdk)
+        targetSdkVersion(Build.compileSdk)
+        versionCode = Build.versionCode
+        versionName = Build.versionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,10 +33,38 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.constraintlayout:constraintlayout:1.1.3")
-    testImplementation("junit:junit:4.12")
-    androidTestImplementation("androidx.test.ext:junit:1.1.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
+
+    implementation(Libs.Kotlin.stdlib)
+    implementation(Libs.Kotlin.reflect)
+
+    implementation(Libs.AndroidX.Lifecycle.extensions)
+    implementation(Libs.AndroidX.Lifecycle.viewmodelKtx)
+
+    implementation(Libs.AndroidX.appcompat)
+    implementation(Libs.AndroidX.preference)
+    implementation(Libs.AndroidX.Fragment.fragmentKtx)
+    implementation(Libs.AndroidX.Navigation.fragment)
+    implementation(Libs.AndroidX.Navigation.ui)
+    implementation(Libs.AndroidX.constraintlayout)
+
+    implementation(Libs.Google.material)
+
+    implementation(Libs.Coroutines.core)
+    implementation(Libs.Coroutines.android)
+
+    implementation(Libs.Koin.scope)
+    implementation(Libs.Koin.viewmodel)
+    implementation(Libs.Koin.fragment)
+    implementation(Libs.Koin.ext)
+
+    implementation(Libs.timber)
+
+    debugImplementation(Libs.leakCanary)
+
+    testImplementation(Libs.junit)
+    testImplementation(Libs.robolectric)
+    testImplementation(Libs.AndroidX.Test.core)
+    testImplementation(Libs.AndroidX.Test.runner)
+    testImplementation(Libs.AndroidX.Test.rules)
+    testImplementation(Libs.AndroidX.Test.espressoCore)
 }

@@ -1,4 +1,4 @@
-
+package com.koidev.pomodoro
 
 object Versions {
     const val ktlint = "0.36.0"
@@ -10,55 +10,32 @@ object Build {
     const val minSdk = 21
     const val versionCode = 1
     const val versionName = "1.0"
+    const val appId = "com.koidev.pomodoro"
 }
 
 object Libs {
     const val androidGradlePlugin = "com.android.tools.build:gradle:3.6.0"
     const val dexcountGradlePlugin = "com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.2"
-    const val playPublisherPlugin = "com.github.triplet.gradle:play-publisher:2.7.1"
-
-    const val mvRx = "com.airbnb.android:mvrx:1.3.0"
-
-    const val threeTenBp = "org.threeten:threetenbp:1.4.1"
-    const val threeTenBpNoTzdb = "$threeTenBp:no-tzdb"
-    const val threeTenAbp = "com.jakewharton.threetenabp:threetenabp:1.2.2"
-
-    const val gravitySnapHelper = "com.github.rubensousa:gravitysnaphelper:2.2.0"
 
     const val timber = "com.jakewharton.timber:timber:4.7.1"
-
-    const val tmdbJava = "com.uwetrottmann.tmdb2:tmdb-java:2.2.0"
-    const val traktJava = "com.uwetrottmann.trakt5:trakt-java:6.4.0"
-
-    const val appauth = "net.openid:appauth:0.7.1"
 
     const val junit = "junit:junit:4.13"
     const val robolectric = "org.robolectric:robolectric:4.3.1"
     const val mockK = "io.mockk:mockk:1.9.3"
 
-    const val inboxRecyclerView = "me.saket:inboxrecyclerview:2.0.0-beta3"
-
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:2.2"
 
-    const val flexbox = "com.google.android:flexbox:2.0.1"
-
-    const val store = "com.dropbox.mobile.store:store4:4.0.0-alpha03"
-
-    object Insetter {
-        private const val version = "0.2.1"
-        const val dbx = "dev.chrisbanes:insetter-dbx:$version"
-        const val ktx = "dev.chrisbanes:insetter-ktx:$version"
+    object Koin {
+        private const val version = "2.1.1"
+        const val scope = "org.koin:koin-androidx-scope:$version"
+        const val viewmodel = "org.koin:koin-androidx-viewmodel:$version"
+        const val fragment = "org.koin:koin-androidx-fragment:$version"
+        const val ext = "org.koin:koin-androidx-ext:$version"
     }
 
     object Google {
         const val material = "com.google.android.material:material:1.1.0"
-        const val firebaseCore = "com.google.firebase:firebase-core:17.2.2"
         const val crashlytics = "com.crashlytics.sdk.android:crashlytics:2.10.1"
-        const val gmsGoogleServices = "com.google.gms:google-services:4.3.3"
-        const val fabricPlugin = "io.fabric.tools:gradle:1.31.2"
-
-        const val openSourceLicensesPlugin = "com.google.android.gms:oss-licenses-plugin:0.10.1"
-        const val openSourceLicensesLibrary = "com.google.android.gms:play-services-oss-licenses:17.0.0"
     }
 
     object Kotlin {
@@ -110,12 +87,6 @@ object Libs {
 
         const val archCoreTesting = "androidx.arch.core:core-testing:2.1.0"
 
-        object Paging {
-            private const val version = "2.1.1"
-            const val common = "androidx.paging:paging-common-ktx:$version"
-            const val runtime = "androidx.paging:paging-runtime-ktx:$version"
-        }
-
         const val preference = "androidx.preference:preference:1.1.0"
 
         const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-beta4"
@@ -143,19 +114,6 @@ object Libs {
         }
     }
 
-    object RxJava {
-        const val rxJava = "io.reactivex.rxjava2:rxjava:2.2.11"
-        const val rxAndroid = "io.reactivex.rxjava2:rxandroid:2.1.1"
-    }
-
-    object Dagger {
-        private const val version = "2.26"
-        const val dagger = "com.google.dagger:dagger:$version"
-        const val androidSupport = "com.google.dagger:dagger-android-support:$version"
-        const val compiler = "com.google.dagger:dagger-compiler:$version"
-        const val androidProcessor = "com.google.dagger:dagger-android-processor:$version"
-    }
-
     object Retrofit {
         private const val version = "2.7.1"
         const val retrofit = "com.squareup.retrofit2:retrofit:$version"
@@ -169,23 +127,9 @@ object Libs {
         const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
     }
 
-    object Epoxy {
-        private const val version = "3.9.0"
-        const val epoxy = "com.airbnb.android:epoxy:$version"
-        const val paging = "com.airbnb.android:epoxy-paging:$version"
-        const val dataBinding = "com.airbnb.android:epoxy-databinding:$version"
-        const val processor = "com.airbnb.android:epoxy-processor:$version"
-    }
-
     object Coil {
         private const val version = "0.9.5"
         const val coil = "io.coil-kt:coil:$version"
-    }
-
-    object AssistedInject {
-        private const val version = "0.5.2"
-        const val annotationDagger2 = "com.squareup.inject:assisted-inject-annotations-dagger2:$version"
-        const val processorDagger2 = "com.squareup.inject:assisted-inject-processor-dagger2:$version"
     }
 
     object Roomigrant {
